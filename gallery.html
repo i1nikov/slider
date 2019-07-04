@@ -1,0 +1,50 @@
+
+<body>
+<head>
+  <link href="styles.css" rel="stylesheet">
+ 
+</head>
+
+<div class="gallary"><div class="ph"><span>Работы мастера Елены</span></div>
+<div id="photos">
+    <img   src="https://i.postimg.cc/wvSsRMfF/52303424-2054314568162418-3762256289517292181-n.jpg">
+<img src="https://i.postimg.cc/2jcKMDqG/52328458-552264935260411-1594684902328481653-n.jpg">
+<img  src="https://i.postimg.cc/pLt4YB5M/53395125-325533248092698-3540061462448892506-n.jpg">
+<img src="https://i.postimg.cc/WpBHT7nq/53400703-2087168771330529-5615345656434782434-n.jpg">    
+<img src="https://i.postimg.cc/mrpmq3kD/53531757-469366750476318-7048741449593956479-n.jpg">
+<img src="https://i.postimg.cc/qvcf4LTb/44721702-714394718937752-5788699698104113985-n.jpg">
+
+    <input type ="button" value="Назад"  class="prev"></input><input type ="button" value="Вперед"  class="next"></input>   
+</div>
+<script>
+var buttonNext = document.querySelector("#photos .next");
+var buttonPrev = document.querySelector("#photos .prev");
+
+var i=0;
+ 
+function next(){
+ 
+img[i].style.display="none";
+i=i+1; 
+if( i >= img.length){
+   i=0;}
+img[i].style.display="block";
+}
+
+function prev(){
+ 
+img[i].style.display="none";
+i=i-1; 
+if( i <0){
+   i=img.length-1;}
+img[i].style.display="block";
+}
+
+
+var img=document.querySelectorAll("img");  
+buttonNext.addEventListener("click",next);
+buttonPrev.addEventListener("click",prev); 
+
+</script>
+
+</body>
